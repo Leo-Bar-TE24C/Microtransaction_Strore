@@ -12,3 +12,4 @@ C:\Users\leonardo.barajasrio\Documents\Programering1\Microtransaction_Strore\Mic
 C:\Users\leonardo.barajasrio\Documents\Programering1\Microtransaction_Strore\Microtransaction_Store\obj\Debug\net9.0\Microtransaction_Store.pdb
 C:\Users\leonardo.barajasrio\Documents\Programering1\Microtransaction_Strore\Microtransaction_Store\obj\Debug\net9.0\Microtransaction_Store.genruntimeconfig.cache
 C:\Users\leonardo.barajasrio\Documents\Programering1\Microtransaction_Strore\Microtransaction_Store\obj\Debug\net9.0\ref\Microtransaction_Store.dll
+C:\Users\leonardo.barajasrio\Documents\Programering1\Microtransaction_Strore\Microtransaction_Store\obj\Debug\net9.0\Microtransaction_Store.sourcelink.json

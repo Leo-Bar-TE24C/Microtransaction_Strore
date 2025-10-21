@@ -1,38 +1,95 @@
-﻿// bool numSuccess = false;
-// int numInt;
-
-// while (numSuccess != true)
-// {
-//     string num = Console.ReadLine();
-//     numSuccess = int.TryParse(num, out numInt);
-
-//     if (numSuccess == false)
-//     {
-//         Console.WriteLine("nu-uh");
-//     }
-// }
+﻿using System.Linq.Expressions;
 
 int funds = 100;
 bool succes = false;
+string num;
+int intnum = 0;
+bool broke;
+int totalPrice;
+
+int apple = 10;
+int birdFood = 50;
+int bike = 100;
 
 while (funds > 0)
 {
-
-  Console.WriteLine("what would you like to buy \nA) Apple - 10G  \nB)  - 50G  \nC)  - 100G  \nD) Nothing");
+  succes = false;
+  broke = false;
+  Console.Clear();
+  Console.WriteLine($"You have {funds}G");
+  Console.WriteLine($"what would you like to buy \nA) Apple - {apple}G  \nB) Bird food - {birdFood}G  \nC) Bike - {bike}G  \nD) Nothing");
   string choice = Console.ReadLine().ToLower().Trim();
 
 
-  if (choice == "a" && funds >= 10)
+  if (choice == "a" && funds >= apple)
   {
     Console.WriteLine("how many would you like to buy");
+    while (succes != true)
+    {
+      num = Console.ReadLine();
+      succes = int.TryParse(num, out intnum);
+      if (succes == false)
+      {
+        Console.WriteLine("sorry thats not allowed, write a number");
+      }
+    }
+
+    totalPrice = intnum * apple;
+    if (funds >= totalPrice)
+    {
+      funds -= totalPrice;
+    }
+    else
+    {
+      broke = true;
+    }
   }
-  else if (choice == "b" && funds >= 50)
+  else if (choice == "b" && funds >= birdFood)
   {
+    Console.WriteLine("how many would you like to buy");
+    while (succes != true)
+    {
+      num = Console.ReadLine();
+      succes = int.TryParse(num, out intnum);
+      if (succes == false)
+      {
+        Console.WriteLine("sorry thats not allowed, write a number");
+      }
+    }
+
+    totalPrice = intnum * birdFood;
+    if (funds >= totalPrice)
+    {
+      funds -= totalPrice;
+    }
+    else
+    {
+      broke = true;
+    }
 
   }
-  else if (choice == "c" && funds >= 100)
+  else if (choice == "c" && funds >= bike)
   {
+    Console.WriteLine("how many would you like to buy");
+    while (succes != true)
+    {
+      num = Console.ReadLine();
+      succes = int.TryParse(num, out intnum);
+      if (succes == false)
+      {
+        Console.WriteLine("sorry thats not allowed, write a number");
+      }
+    }
 
+    totalPrice = intnum * bike;
+    if (funds >= totalPrice)
+    {
+      funds -= totalPrice;
+    }
+    else
+    {
+      broke = true;
+    }
   }
   else if (choice == "d")
   {
@@ -40,6 +97,10 @@ while (funds > 0)
     break;
   }
   else
+  {
+    broke = true;
+  }
+  if (broke == true)
   {
 
     Console.WriteLine(@"                                                                                                                                 
@@ -93,7 +154,7 @@ while (funds > 0)
                                                                                                                                  ");
 
     Console.WriteLine("Your honor, he broke");
+    Console.ReadLine();
   }
-  succes = false;
 }
 Console.ReadLine();
